@@ -37,6 +37,7 @@
             dob = DateTime.MinValue;
             //gender = ;
             city = string.Empty;
+            picture = string.Empty;
         }
 
         public person(string fName, string lName, string mName, genderType _gender, string _address, string _city, string _phone, DateTime _DateofBirth, string _picture)
