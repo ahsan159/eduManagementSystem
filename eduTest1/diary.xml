@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<phonebook>
+  <person>
+    <firstName>Muhammad</firstName>
+    <lastName>Ahsan</lastName>
+    <midName></midName>
+    <address>254-A, Alhmad Colony, AIT</address>
+    <city>Lahore</city>
+    <added>24/05/2023</added>
+    <dateOfBirth>21/12/1987</dateOfBirth>
+    <gender>Male</gender>
+    <email>mahsan159@live.com</email>
+    <contact>
+      <contact1></contact1>
+      <contact2></contact2>
+    </contact>
+  </person>
+  <person>
+    <firstName>Muhammad</firstName>
+    <lastName>Shahid</lastName>
+    <midName>Ehsan</midName>
+    <address>Muslim Town</address>
+    <city>Lahore</city>
+    <added>24/05/2023</added>
+    <dateOfBirth>05/10/1983</dateOfBirth>
+    <gender>Male</gender>
+    <email>ehsan.shahid@gmail.com</email>
+    <contact>
+      <contact1>0321-5638140</contact1>
+      <contact2>042-99024248</contact2>
+    </contact>
+  </person>
+</phonebook>
