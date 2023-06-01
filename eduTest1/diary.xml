@@ -1,33 +1,947 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<phonebook>
-  <person>
-    <firstName>Muhammad</firstName>
-    <lastName>Ahsan</lastName>
-    <midName></midName>
-    <address>254-A, Alhmad Colony, AIT</address>
-    <city>Lahore</city>
-    <added>24/05/2023</added>
-    <dateOfBirth>21/12/1987</dateOfBirth>
-    <gender>Male</gender>
-    <email>mahsan159@live.com</email>
-    <contact>
-      <contact1></contact1>
-      <contact2></contact2>
-    </contact>
-  </person>
-  <person>
-    <firstName>Muhammad</firstName>
-    <lastName>Shahid</lastName>
-    <midName>Ehsan</midName>
-    <address>Muslim Town</address>
-    <city>Lahore</city>
-    <added>24/05/2023</added>
-    <dateOfBirth>05/10/1983</dateOfBirth>
-    <gender>Male</gender>
-    <email>ehsan.shahid@gmail.com</email>
-    <contact>
-      <contact1>0321-5638140</contact1>
-      <contact2>042-99024248</contact2>
-    </contact>
-  </person>
-</phonebook>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="myxsl.xsl"?>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.graphics">
+  <office:meta>
+    <meta:document-statistic meta:object-count="86"/>
+    <meta:generator>LibreOffice/6.1.5.2$Linux_X86_64 LibreOffice_project/10$Build-2</meta:generator>
+  </office:meta>
+  <office:settings>
+    <config:config-item-set config:name="ooo:view-settings">
+      <config:config-item config:name="VisibleAreaTop" config:type="int">0</config:config-item>
+      <config:config-item config:name="VisibleAreaLeft" config:type="int">0</config:config-item>
+      <config:config-item config:name="VisibleAreaWidth" config:type="int">14099</config:config-item>
+      <config:config-item config:name="VisibleAreaHeight" config:type="int">9999</config:config-item>
+    </config:config-item-set>
+    <config:config-item-set config:name="ooo:configuration-settings">
+      <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+      <config:config-item config:name="BitmapTableURL" config:type="string">$(brandbaseurl)/share/palette%3B$(user)/config/standard.sob</config:config-item>
+      <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+      <config:config-item config:name="ColorTableURL" config:type="string">$(brandbaseurl)/share/palette%3B$(user)/config/standard.soc</config:config-item>
+      <config:config-item config:name="DashTableURL" config:type="string">$(brandbaseurl)/share/palette%3B$(user)/config/standard.sod</config:config-item>
+      <config:config-item config:name="DefaultTabStop" config:type="int">1270</config:config-item>
+      <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="GradientTableURL" config:type="string">$(brandbaseurl)/share/palette%3B$(user)/config/standard.sog</config:config-item>
+      <config:config-item config:name="HatchTableURL" config:type="string">$(brandbaseurl)/share/palette%3B$(user)/config/standard.soh</config:config-item>
+      <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="IsPrintBooklet" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="IsPrintBookletBack" config:type="boolean">true</config:config-item>
+      <config:config-item config:name="IsPrintBookletFront" config:type="boolean">true</config:config-item>
+      <config:config-item config:name="IsPrintDate" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="IsPrintFitPage" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="IsPrintHiddenPages" config:type="boolean">true</config:config-item>
+      <config:config-item config:name="IsPrintPageName" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="IsPrintTilePage" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="IsPrintTime" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="LineEndTableURL" config:type="string">$(brandbaseurl)/share/palette%3B$(user)/config/standard.soe</config:config-item>
+      <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="MeasureUnit" config:type="short">7</config:config-item>
+      <config:config-item config:name="PageNumberFormat" config:type="int">4</config:config-item>
+      <config:config-item config:name="ParagraphSummation" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="PrintQuality" config:type="int">0</config:config-item>
+      <config:config-item config:name="PrinterIndependentLayout" config:type="string">low-resolution</config:config-item>
+      <config:config-item config:name="PrinterName" config:type="string"/>
+      <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
+      <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="ScaleDenominator" config:type="int">1</config:config-item>
+      <config:config-item config:name="ScaleNumerator" config:type="int">1</config:config-item>
+      <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+    </config:config-item-set>
+  </office:settings>
+  <office:scripts>
+    <office:script script:language="ooo:Basic">
+      <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </office:script>
+  </office:scripts>
+  <office:font-face-decls>
+    <style:font-face style:name="Montserrat1" svg:font-family="Montserrat"/>
+    <style:font-face style:name="Montserratular1" svg:font-family="Montserratular"/>
+    <style:font-face style:name="DejaVu Sans1" svg:font-family="&apos;DejaVu Sans&apos;" style:font-pitch="variable"/>
+    <style:font-face style:name="Liberation Serif1" svg:font-family="&apos;Liberation Serif&apos;" style:font-pitch="variable"/>
+    <style:font-face style:name="Montserrat" svg:font-family="Montserrat" style:font-pitch="variable"/>
+    <style:font-face style:name="Montserratular" svg:font-family="Montserratular" style:font-pitch="variable"/>
+    <style:font-face style:name="Liberation Sans" svg:font-family="&apos;Liberation Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
+    <style:font-face style:name="Liberation Serif" svg:font-family="&apos;Liberation Serif&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
+    <style:font-face style:name="Noto Sans" svg:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
+    <style:font-face style:name="DejaVu Sans" svg:font-family="&apos;DejaVu Sans&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
+    <style:font-face style:name="Noto Sans Devanagari" svg:font-family="&apos;Noto Sans Devanagari&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
+  </office:font-face-decls>
+  <office:styles>
+    <draw:gradient draw:name="Filled_20_Blue" draw:display-name="Filled Blue" draw:style="linear" draw:start-color="#729fcf" draw:end-color="#355269" draw:start-intensity="100%" draw:end-intensity="100%" draw:angle="300" draw:border="0%"/>
+    <draw:gradient draw:name="Filled_20_Green" draw:display-name="Filled Green" draw:style="linear" draw:start-color="#77bc65" draw:end-color="#127622" draw:start-intensity="100%" draw:end-intensity="100%" draw:angle="300" draw:border="0%"/>
+    <draw:gradient draw:name="Filled_20_Red" draw:display-name="Filled Red" draw:style="linear" draw:start-color="#ff6d6d" draw:end-color="#c9211e" draw:start-intensity="100%" draw:end-intensity="100%" draw:angle="300" draw:border="0%"/>
+    <draw:gradient draw:name="Filled_20_Yellow" draw:display-name="Filled Yellow" draw:style="linear" draw:start-color="#ffde59" draw:end-color="#b47804" draw:start-intensity="100%" draw:end-intensity="100%" draw:angle="300" draw:border="0%"/>
+    <draw:marker draw:name="Arrow" svg:viewBox="0 0 20 30" svg:d="M10 0l-10 30h20z"/>
+    <style:default-style style:family="graphic">
+      <style:graphic-properties svg:stroke-color="#3465a4" draw:fill-color="#729fcf" fo:wrap-option="no-wrap"/>
+      <style:paragraph-properties style:text-autospace="ideograph-alpha" style:punctuation-wrap="simple" style:line-break="strict" style:font-independent-line-spacing="false">
+        <style:tab-stops/>
+      </style:paragraph-properties>
+      <style:text-properties style:use-window-font-color="true" style:font-name="Liberation Serif" fo:font-size="24pt" fo:language="en" fo:country="US" style:font-name-asian="DejaVu Sans" style:font-size-asian="24pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="DejaVu Sans" style:font-size-complex="24pt" style:language-complex="hi" style:country-complex="IN"/>
+    </style:default-style>
+    <style:style style:name="standard" style:family="graphic"/>
+    <style:style style:name="objectwithoutfill" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties svg:stroke-color="#000000" draw:fill="none"/>
+    </style:style>
+    <style:style style:name="Object_20_with_20_no_20_fill_20_and_20_no_20_line" style:display-name="Object with no fill and no line" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none"/>
+    </style:style>
+    <style:style style:name="text" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none"/>
+    </style:style>
+    <style:style style:name="title" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none"/>
+      <style:text-properties fo:font-size="44pt"/>
+    </style:style>
+    <style:style style:name="headline" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none"/>
+      <style:paragraph-properties fo:margin-top="0.42cm" fo:margin-bottom="0.21cm"/>
+      <style:text-properties fo:font-size="24pt"/>
+    </style:style>
+    <style:style style:name="measure" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-color="#000000" draw:marker-start="Arrow" draw:marker-start-width="0.2cm" draw:marker-end="Arrow" draw:marker-end-width="0.2cm" draw:fill="none" draw:show-unit="true"/>
+      <style:text-properties fo:font-size="12pt"/>
+    </style:style>
+    <style:style style:name="Filled" style:family="graphic">
+      <style:graphic-properties svg:stroke-color="#000000" draw:fill="solid" draw:fill-color="#ffffff"/>
+      <style:text-properties style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Filled_20_Blue" style:display-name="Filled Blue" style:family="graphic" style:parent-style-name="Filled">
+      <style:graphic-properties draw:stroke="none" draw:fill="gradient" draw:fill-gradient-name="Filled_20_Blue"/>
+      <style:text-properties fo:color="#ffffff" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Filled_20_Green" style:display-name="Filled Green" style:family="graphic" style:parent-style-name="Filled">
+      <style:graphic-properties draw:stroke="none" draw:fill="gradient" draw:fill-gradient-name="Filled_20_Green"/>
+      <style:text-properties fo:color="#ffffff" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Filled_20_Red" style:display-name="Filled Red" style:family="graphic" style:parent-style-name="Filled">
+      <style:graphic-properties draw:stroke="none" draw:fill="gradient" draw:fill-gradient-name="Filled_20_Red"/>
+      <style:text-properties fo:color="#ffffff" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Filled_20_Yellow" style:display-name="Filled Yellow" style:family="graphic" style:parent-style-name="Filled">
+      <style:graphic-properties draw:stroke="none" draw:fill="gradient" draw:fill-gradient-name="Filled_20_Yellow"/>
+      <style:text-properties fo:color="#ffffff" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Outlined" style:family="graphic">
+      <style:graphic-properties svg:stroke-width="0.081cm" svg:stroke-color="#000000" draw:fill="none"/>
+      <style:text-properties style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Outlined_20_Blue" style:display-name="Outlined Blue" style:family="graphic" style:parent-style-name="Outlined">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.081cm" svg:stroke-color="#355269"/>
+      <style:text-properties fo:color="#355269" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Outlined_20_Green" style:display-name="Outlined Green" style:family="graphic" style:parent-style-name="Outlined">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.081cm" svg:stroke-color="#127622"/>
+      <style:text-properties fo:color="#127622" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Outlined_20_Red" style:display-name="Outlined Red" style:family="graphic" style:parent-style-name="Outlined">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.081cm" svg:stroke-color="#c9211e"/>
+      <style:text-properties fo:color="#c9211e" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+    <style:style style:name="Outlined_20_Yellow" style:display-name="Outlined Yellow" style:family="graphic" style:parent-style-name="Outlined">
+      <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.081cm" svg:stroke-color="#b47804"/>
+      <style:text-properties fo:color="#b47804" style:font-name="Noto Sans" fo:font-family="&apos;Noto Sans&apos;" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold"/>
+    </style:style>
+  </office:styles>
+  <office:automatic-styles>
+    <style:page-layout style:name="PM0">
+      <style:page-layout-properties fo:margin-top="0cm" fo:margin-bottom="1cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:page-width="21.007cm" fo:page-height="29.712cm" style:print-orientation="portrait"/>
+    </style:page-layout>
+    <style:style style:name="dp1" style:family="drawing-page">
+      <style:drawing-page-properties draw:background-size="border" draw:fill="none"/>
+    </style:style>
+    <style:style style:name="dp2" style:family="drawing-page"/>
+    <style:style style:name="gr1" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="solid" draw:fill-color="#ffffff"/>
+    </style:style>
+    <style:style style:name="gr2" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="solid" draw:fill-color="#fdfdfd"/>
+    </style:style>
+    <style:style style:name="gr3" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="solid" draw:fill-color="#263547"/>
+    </style:style>
+    <style:style style:name="gr4" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="solid" draw:fill-color="#fd4345"/>
+    </style:style>
+    <style:style style:name="gr5" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.467cm" fo:min-width="0.467cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr6" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.317cm" fo:min-width="0.317cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr7" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="1.07cm" fo:min-width="1.07cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr8" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.352cm" fo:min-width="0.352cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr9" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.477cm" fo:min-width="0.477cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr10" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.299cm" fo:min-width="0.299cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr11" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.355cm" fo:min-width="0.355cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr12" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.284cm" fo:min-width="0.284cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr13" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.366cm" fo:min-width="0.366cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="gr14" style:family="graphic" style:parent-style-name="standard">
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="left" draw:textarea-vertical-align="top" draw:auto-grow-height="true" draw:auto-grow-width="true" fo:min-height="0.281cm" fo:min-width="0.281cm" fo:padding-top="0cm" fo:padding-bottom="0cm" fo:padding-left="0cm" fo:padding-right="0cm"/>
+    </style:style>
+    <style:style style:name="P1" style:family="paragraph">
+      <loext:graphic-properties draw:fill="solid" draw:fill-color="#ffffff"/>
+    </style:style>
+    <style:style style:name="P2" style:family="paragraph">
+      <loext:graphic-properties draw:fill="solid" draw:fill-color="#fdfdfd"/>
+    </style:style>
+    <style:style style:name="P3" style:family="paragraph">
+      <loext:graphic-properties draw:fill="solid" draw:fill-color="#263547"/>
+    </style:style>
+    <style:style style:name="P4" style:family="paragraph">
+      <loext:graphic-properties draw:fill="solid" draw:fill-color="#fd4345"/>
+    </style:style>
+    <style:style style:name="P5" style:family="paragraph">
+      <style:paragraph-properties fo:text-align="start" style:writing-mode="lr-tb"/>
+    </style:style>
+    <style:style style:name="P6" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="13.3000001907349pt" style:font-size-asian="13.3000001907349pt" style:font-size-complex="13.3000001907349pt"/>
+    </style:style>
+    <style:style style:name="P7" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
+    </style:style>
+    <style:style style:name="P8" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="30.3999996185303pt" style:font-size-asian="30.3999996185303pt" style:font-size-complex="30.3999996185303pt"/>
+    </style:style>
+    <style:style style:name="P9" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+    </style:style>
+    <style:style style:name="P10" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="13.6000003814697pt" style:font-size-asian="13.6000003814697pt" style:font-size-complex="13.6000003814697pt"/>
+    </style:style>
+    <style:style style:name="P11" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="8.5pt" style:font-size-asian="8.5pt" style:font-size-complex="8.5pt"/>
+    </style:style>
+    <style:style style:name="P12" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="10.1000003814697pt" style:font-size-asian="10.1000003814697pt" style:font-size-complex="10.1000003814697pt"/>
+    </style:style>
+    <style:style style:name="P13" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="8.10000038146973pt" style:font-size-asian="8.10000038146973pt" style:font-size-complex="8.10000038146973pt"/>
+    </style:style>
+    <style:style style:name="P14" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="10.3999996185303pt" style:font-size-asian="10.3999996185303pt" style:font-size-complex="10.3999996185303pt"/>
+    </style:style>
+    <style:style style:name="P15" style:family="paragraph">
+      <loext:graphic-properties draw:fill="none"/>
+      <style:text-properties fo:font-size="8pt" style:font-size-asian="8pt" style:font-size-complex="8pt"/>
+    </style:style>
+    <style:style style:name="T1" style:family="text">
+      <style:text-properties fo:color="#263547" style:font-name="Montserrat1" fo:font-size="13.3000001907349pt" fo:font-weight="bold" style:font-size-asian="13.3000001907349pt" style:font-name-complex="Montserrat1" style:font-size-complex="13.3000001907349pt" style:font-weight-complex="bold"/>
+    </style:style>
+    <style:style style:name="T2" style:family="text">
+      <style:text-properties fo:color="#263547" style:font-name="Montserrat1" fo:font-size="9pt" style:font-size-asian="9pt" style:font-name-complex="Montserrat1" style:font-size-complex="9pt"/>
+    </style:style>
+    <style:style style:name="T3" style:family="text">
+      <style:text-properties fo:color="#fdfdfd" style:font-name="Montserratular1" fo:font-size="30.3999996185303pt" style:font-size-asian="30.3999996185303pt" style:font-name-complex="Montserratular1" style:font-size-complex="30.3999996185303pt"/>
+    </style:style>
+    <style:style style:name="T4" style:family="text">
+      <style:text-properties fo:color="#fd4345" style:font-name="Montserrat1" fo:font-size="10pt" fo:font-weight="bold" style:font-size-asian="10pt" style:font-name-complex="Montserrat1" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+    </style:style>
+    <style:style style:name="T5" style:family="text">
+      <style:text-properties fo:color="#fdfdfd" style:font-name="Montserrat1" fo:font-size="13.6000003814697pt" style:font-size-asian="13.6000003814697pt" style:font-name-complex="Montserrat1" style:font-size-complex="13.6000003814697pt"/>
+    </style:style>
+    <style:style style:name="T6" style:family="text">
+      <style:text-properties fo:color="#fdfdfd" style:font-name="Montserrat1" fo:font-size="8.5pt" style:font-size-asian="8.5pt" style:font-name-complex="Montserrat1" style:font-size-complex="8.5pt"/>
+    </style:style>
+    <style:style style:name="T7" style:family="text">
+      <style:text-properties fo:color="#fdfdfd" style:font-name="Montserrat1" fo:font-size="8.5pt" fo:font-weight="bold" style:font-size-asian="8.5pt" style:font-name-complex="Montserrat1" style:font-size-complex="8.5pt" style:font-weight-complex="bold"/>
+    </style:style>
+    <style:style style:name="T8" style:family="text">
+      <style:text-properties fo:color="#fd4345" style:font-name="Montserrat1" fo:font-size="10.1000003814697pt" fo:font-weight="bold" style:font-size-asian="10.1000003814697pt" style:font-name-complex="Montserrat1" style:font-size-complex="10.1000003814697pt" style:font-weight-complex="bold"/>
+    </style:style>
+    <style:style style:name="T9" style:family="text">
+      <style:text-properties fo:color="#fdfdfd" style:font-name="Montserrat1" fo:font-size="8.10000038146973pt" style:font-size-asian="8.10000038146973pt" style:font-name-complex="Montserrat1" style:font-size-complex="8.10000038146973pt"/>
+    </style:style>
+    <style:style style:name="T10" style:family="text">
+      <style:text-properties fo:color="#fdfdfd" style:font-name="Montserratular1" fo:font-size="8.10000038146973pt" style:font-size-asian="8.10000038146973pt" style:font-name-complex="Montserratular1" style:font-size-complex="8.10000038146973pt"/>
+    </style:style>
+    <style:style style:name="T11" style:family="text">
+      <style:text-properties fo:color="#263547" style:font-name="Montserrat1" fo:font-size="10.3999996185303pt" fo:font-weight="bold" style:font-size-asian="10.3999996185303pt" style:font-name-complex="Montserrat1" style:font-size-complex="10.3999996185303pt" style:font-weight-complex="bold"/>
+    </style:style>
+    <style:style style:name="T12" style:family="text">
+      <style:text-properties fo:color="#263547" style:font-name="Montserrat1" fo:font-size="8pt" style:font-size-asian="8pt" style:font-name-complex="Montserrat1" style:font-size-complex="8pt"/>
+    </style:style>
+    <style:style style:name="T13" style:family="text">
+      <style:text-properties fo:color="#263547" style:font-name="Montserrat1" fo:font-size="8pt" fo:font-weight="bold" style:font-size-asian="8pt" style:font-name-complex="Montserrat1" style:font-size-complex="8pt" style:font-weight-complex="bold"/>
+    </style:style>
+    <text:list-style style:name="L1">
+      <text:list-level-style-bullet text:level="1" text:bullet-char="●">
+        <style:list-level-properties text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="2" text:bullet-char="●">
+        <style:list-level-properties text:space-before="0.6cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="3" text:bullet-char="●">
+        <style:list-level-properties text:space-before="1.2cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="4" text:bullet-char="●">
+        <style:list-level-properties text:space-before="1.8cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="5" text:bullet-char="●">
+        <style:list-level-properties text:space-before="2.4cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="6" text:bullet-char="●">
+        <style:list-level-properties text:space-before="3cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="7" text:bullet-char="●">
+        <style:list-level-properties text:space-before="3.6cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="8" text:bullet-char="●">
+        <style:list-level-properties text:space-before="4.2cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="9" text:bullet-char="●">
+        <style:list-level-properties text:space-before="4.8cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+      <text:list-level-style-bullet text:level="10" text:bullet-char="●">
+        <style:list-level-properties text:space-before="5.4cm" text:min-label-width="0.6cm"/>
+        <style:text-properties fo:font-family="StarSymbol" style:use-window-font-color="true" fo:font-size="45%"/>
+      </text:list-level-style-bullet>
+    </text:list-style>
+  </office:automatic-styles>
+  <office:master-styles>
+    <draw:layer-set>
+      <draw:layer draw:name="layout"/>
+      <draw:layer draw:name="background"/>
+      <draw:layer draw:name="backgroundobjects"/>
+      <draw:layer draw:name="controls"/>
+      <draw:layer draw:name="measurelines"/>
+    </draw:layer-set>
+    <style:master-page style:name="master-page3" style:page-layout-name="PM0" draw:style-name="dp1"/>
+  </office:master-styles>
+  <office:body>
+    <office:drawing>
+      <draw:page draw:name="page1" draw:style-name="dp2" draw:master-page-name="master-page3">
+        <draw:polygon draw:style-name="gr1" draw:text-style-name="P1" draw:layer="layout" svg:width="21.025cm" svg:height="29.975cm" svg:x="0cm" svg:y="0cm" svg:viewBox="0 0 21026 29976" draw:points="0,0 21026,0 21026,29976 0,29976">
+          <text:p/>
+        </draw:polygon>
+        <draw:polygon draw:style-name="gr1" draw:text-style-name="P1" draw:layer="layout" svg:width="21.025cm" svg:height="29.737cm" svg:x="0cm" svg:y="0cm" svg:viewBox="0 0 21026 29738" draw:points="0,0 21026,0 21026,29738 0,29738">
+          <text:p/>
+        </draw:polygon>
+        <draw:polygon draw:style-name="gr2" draw:text-style-name="P2" draw:layer="layout" svg:width="21.025cm" svg:height="29.737cm" svg:x="0cm" svg:y="0cm" svg:viewBox="0 0 21026 29738" draw:points="0,0 21026,0 21026,29738 0,29738">
+          <text:p/>
+        </draw:polygon>
+        <draw:polygon draw:style-name="gr3" draw:text-style-name="P3" draw:layer="layout" svg:width="6.329cm" svg:height="30.24cm" svg:x="-1.059cm" svg:y="0cm" svg:viewBox="0 0 6330 30241" draw:points="0,0 6330,0 6330,30241 0,30241">
+          <text:p/>
+        </draw:polygon>
+        <draw:polygon draw:style-name="gr4" draw:text-style-name="P4" draw:layer="layout" svg:width="22.085cm" svg:height="6.144cm" svg:x="-0.536cm" svg:y="-2.702cm" svg:viewBox="0 0 22086 6145" draw:points="0,0 22086,0 22086,6145 0,6145">
+          <text:p/>
+        </draw:polygon>
+        <draw:polygon draw:style-name="gr4" draw:text-style-name="P4" draw:layer="layout" svg:width="13.163cm" svg:height="0.872cm" svg:x="6.541cm" svg:y="14.862cm" svg:viewBox="0 0 13164 873" draw:points="0,0 13164,0 13164,873 0,873">
+          <text:p/>
+        </draw:polygon>
+        <draw:frame draw:style-name="gr5" draw:text-style-name="P6" draw:layer="layout" svg:width="7.571cm" svg:height="0.543cm" svg:x="5.622cm" svg:y="3.594cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T1">
+                C U R R I C U L U M <text:s text:c="2"/>V I T A E
+              </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.176cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="4.712cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">I thoroughly enjoy working within new environments and seeing how my skills and</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.859cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="5.135cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">experience can be contributed to and adapted to maximise efficiency within any</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.35cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="5.559cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">workplace. This included working within time-sensitive conditions and being able to</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.702cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="5.983cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">cope under pressure. Due to my working ethic, I can confidently contribute to a</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.224cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="6.406cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">business to help them provide quality services on which customers depend. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.616cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="7.254cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">I am well-mannered and have worked hard to achieve excellence in everything I do. I</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.426cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="7.677cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">
+                have an excellent record of attendance and I am determined to achieve my goals. <text:s/>I
+              </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.468cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="8.101cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">
+                am confident in a group situation and thoroughly enjoy learning as part of a team. <text:s/>I
+              </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.147cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="8.525cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">also enjoy sharing my knowledge with others, particularly in areas that I am</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="11.915cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="8.949cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">passionate about. During my time at school, I have actively participated in</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.629cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="9.372cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">extracurricular activities, going above and beyond the requirements of a student and</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.313cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="9.796cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">
+                often out of my comfort zone. <text:s/>I am proud of my achievements which include
+              </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.338cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="10.22cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">becoming an anti-bullying ambassador, student year leader, Year 11 Student</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.596cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="10.643cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">
+                Councillor, Prefect and Student Head of House. <text:s/>Throughout these roles, I have
+              </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.214cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="11.067cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">worked closely with other students and Senior Team Leadership adults to organise</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.278cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="11.491cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">events to bring the school community together, provide support for my peers and I</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.193cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="11.914cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">have been at the forefront of reviews to better the school environment overall and</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.578cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="12.338cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">maintain high standards and student expectations. My ability to care for and support</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="11.254cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="12.762cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">others is important for me as well as taking ownership and leadership.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="12.245cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="13.185cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">I work within a range of job roles that require precision in customer &amp; tenant</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="11.17cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="13.609cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">satisfaction as well as keeping up to date with laws and regulations in</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="13.028cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="14.033cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">telecommunications, education and standardisation, Corporate ISO, E-commerce,</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr6" draw:text-style-name="P7" draw:layer="layout" svg:width="2.881cm" svg:height="0.374cm" svg:x="5.622cm" svg:y="14.456cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T2">and Distrubution. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr7" draw:text-style-name="P8" draw:layer="layout" svg:width="12.338cm" svg:height="1.25cm" svg:x="0.249cm" svg:y="1.217cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T3">EUAN MCGINNESS - CV</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr8" draw:text-style-name="P9" draw:layer="layout" svg:width="4.93cm" svg:height="0.412cm" svg:x="0.248cm" svg:y="3.97cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T4">Q U A L I F I C A T I O N S</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr9" draw:text-style-name="P10" draw:layer="layout" svg:width="3.643cm" svg:height="0.56cm" svg:x="0.236cm" svg:y="5.145cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T5">Wath Academy</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.16cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="5.76cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">GCSE (or equivalent)</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.791cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="6.16cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T7">Achieved August 2020</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="1.407cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="6.585cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Maths - 4</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.173cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="6.985cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">English Language - 5</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.169cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="7.386cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">English Literature - 4</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="1.666cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="7.786cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Science - 5</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.157cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="8.186cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Geography - 5</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.49cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="8.587cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Enterprise &amp; Marketing</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.8cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="8.987cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Level 2 Distinction</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.716cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="9.387cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Business Proposal</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="1.094cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="9.788cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Level 2</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.452cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="10.188cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">IT Pre-Production Skills</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.8cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="10.588cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Level 2 Distinction</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.737cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="10.988cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Creative IMedia IT</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.8cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="11.389cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Level 2 Distinction</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="4.498cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="11.789cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Create a Multi Page Webpage</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.8cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="12.189cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Level 2 Distinction</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.826cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="12.59cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Physical Education</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="2.8cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="12.99cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">Level 2 Distinction</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="1.742cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="13.79cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T7">Additional</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr10" draw:text-style-name="P11" draw:layer="layout" svg:width="3.342cm" svg:height="0.352cm" svg:x="0.236cm" svg:y="14.216cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T6">First Aid - Emergency </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr11" draw:text-style-name="P12" draw:layer="layout" svg:width="3.677cm" svg:height="0.416cm" svg:x="0.249cm" svg:y="27.812cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T8">R E F E R E N C E S</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr12" draw:text-style-name="P13" draw:layer="layout" svg:width="2.47cm" svg:height="0.336cm" svg:x="0.265cm" svg:y="28.814cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T9">Can be provided </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr12" draw:text-style-name="P13" draw:layer="layout" svg:width="1.903cm" svg:height="0.336cm" svg:x="0.249cm" svg:y="28.433cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T10">ON REQUEST</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr13" draw:text-style-name="P14" draw:layer="layout" svg:width="3.698cm" svg:height="0.433cm" svg:x="5.494cm" svg:y="15.865cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T11">E X P E R I E N C E</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="10.517cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="16.741cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">2018-2019 I was a Volunteer with </text:span>
+              <text:span text:style-name="T13">Rotherham Academy Young Leader</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.815cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="17.141cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">During this role, I worked alongside young people to help provide them with sport opportunities. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.049cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="17.518cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">
+                <text:s/>
+              </text:span>
+              <text:span text:style-name="T12">
+                I also worked with those less able. <text:s/>I won the award of best boy leader during my time with
+              </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="12.448cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="17.895cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">RAYLS and enjoyed working alongside a diverse group of people with a variety of skills.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="10.615cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="18.648cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">2017-Current </text:span>
+              <text:span text:style-name="T13">Network Administrator Specialist Beauty Designs LTD</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="12.643cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="19.048cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">I am currently in this role working for SBD which is an upcoming beauty brand. I manage</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.752cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="19.425cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">peripherals and have experience working with a variety of different hardware, software and web</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="12.528cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="19.801cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">pages. I am responsible for website security, uptime and maintenance of optimal digital</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="1.907cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="20.178cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">experiences. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.748cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="20.554cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">Alongside working within Higher Customer Relations. Assistant to meet with legislation, FDA and</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="2.669cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="20.931cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">ISO requirements. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="5.992cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="21.684cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">2021-</text:span>
+              <text:span text:style-name="T13">Current Director IGot Media LTD</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.417cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="22.084cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">iGM is a telecommunications company that provides B2B and B2C solutions that aim to be the</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="14.124cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="22.461cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">highest service for the lowest prices. We specialise in these fields and provide exceptional services</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="6.5cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="22.838cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">tailored for you, supported and backed by us.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="12.935cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="23.214cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">Hosting, Web Development, Digital Marketing, Communications, Design, Printing, Payment</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="5.196cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="23.591cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">Solutions and GPS Fleet Technology.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="5.387cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="24.344cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">2021 - </text:span>
+              <text:span text:style-name="T13">Property Portfolio Manager</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="12.668cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="24.744cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">I am a property portfolio manager and my responsibltiy is tenant satisfation and welfare.</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.917cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="25.121cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">Managing health and safety regulations, fire assesments, rental and insurance. Managing houses,</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.976cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="25.497cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">studios, and commercial properties. I&apos;m the first point of call for tenants that require assistance or</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="7.686cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="25.874cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">have issues, from maintenance issues to paying rent. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="5.633cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="26.627cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">2021-</text:span>
+              <text:span text:style-name="T13">Current Director SBD Training</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.168cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="27.027cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">SBD Training is a private academy for the education of professional beauty treatments. I am</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.883cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="27.404cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">responsible for the standardisation and quality outcome of learning. It&apos;s my responsibility to keep</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.676cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="27.781cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">in touch with the accrediting board and also to authorise the deployment of beauticians courses</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="13.82cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="28.157cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">nationally; I then often standardise our educators to ensure that the highest quality of learning is</text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+        <draw:frame draw:style-name="gr14" draw:text-style-name="P15" draw:layer="layout" svg:width="2.352cm" svg:height="0.331cm" svg:x="5.494cm" svg:y="28.534cm">
+          <draw:text-box>
+            <text:p text:style-name="P5">
+              <text:span text:style-name="T12">being achieved. </text:span>
+            </text:p>
+          </draw:text-box>
+        </draw:frame>
+      </draw:page>
+    </office:drawing>
+  </office:body>
+</office:document>
