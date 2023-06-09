@@ -5,9 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:phonebook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="183,144,0,0" VerticalAlignment="Top"/>
+        <StackPanel Background="LightPink">
+            <DockPanel Margin="0,0,0,0" MinWidth="800" MinHeight="200" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Aqua">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image Source="personempty.png" Name="Image" Width="100" Height="100" Margin="50,50,0,50" HorizontalAlignment="Left"/>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <StackPanel Background="Bisque">
+                        <Label Name="nameLabel" Height="50" Margin="20,50,0,0" Background="BlanchedAlmond" Content="Name" FontSize="36"></Label>
+                        <Label Name="contactLabel"  Height="30" Margin="20,10,0,0" Background="BlanchedAlmond" Content="Contact" FontSize="16"></Label>
+                        <Label Name="addressLabel" Height="30" Margin="20,10,0,0" Background="BlanchedAlmond" Content="Address" FontSize="16"></Label>
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+            <DockPanel Margin="0,0,0,0" MinWidth="800" MinHeight="300" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Beige">
+            </DockPanel>
+            <DockPanel LastChildFill="True" Margin="0,0,0,0" MinWidth="800" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Yellow">
+                <Button Name="first" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="prev" Content="&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="save" Content="Update" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name ="delete" Content="Delete" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="add" Content="New" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="next" Content="&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name ="last" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name ="print" Content="Print" HorizontalAlignment="Right" Margin="25,0,25,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+            </DockPanel>
+        </StackPanel>
 
     </Grid>
 </Window>

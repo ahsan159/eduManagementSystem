@@ -5,6 +5,11 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+  
   </PropertyGroup>
-
+<ItemGroup>
+   <Content Include="personempty.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+   </Content>
+</ItemGroup>  
 </Project>
