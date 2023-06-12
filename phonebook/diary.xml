@@ -30,4 +30,19 @@
       <contact2>042-99024248</contact2>
     </contact>
   </person>
+  <person>
+    <firstName>Rukhsar</firstName>
+    <lastName>Butt</lastName>
+    <midName>Ahmad</midName>
+    <address>Johar Town</address>
+    <city>Lahore</city>
+    <added>12/06/2023</added>
+    <dateOfBirth>05/10/1983</dateOfBirth>
+    <gender>Male</gender>
+    <email>rukhsarahmad2017@gmail.com</email>
+    <contact>
+      <contact1>042-99024248</contact1>
+      <contact2></contact2>
+    </contact>
+  </person>
 </phonebook>

@@ -29,6 +29,19 @@ p2.setCity("Lahore");
 p2.addContact("0321-5638140");
 p2.addContact("042-99024248");
 d.add(p2);
+
+person p3 = new person("Rukhsar","Butt","Ahmad");
+p3.setGender(genderType.Male);
+DateTime dt2 =new DateTime(1983,10,5);
+p3.setDOB(dt2);
+p3.setEmail("rukhsarahmad2017@gmail.com");
+p3.setAddress("Johar Town");
+p3.setCity("Lahore");
+p3.addContact("042-99024248");
+d.add(p3);
+
+
+
 XElement ele = d.xml();
 XDocument doc = new XDocument();
 doc.Add(ele);

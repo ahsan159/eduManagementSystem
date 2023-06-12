@@ -21,9 +21,50 @@ namespace phonebook
     /// </summary>
     public partial class MainWindow : Window
     {
+        diary phoneDiary = new diary();
+        person cPerson = null;
         public MainWindow()
         {
             InitializeComponent();
+            phoneDiary.loadXml("diary.xml");
+            cPerson = phoneDiary.First();
+            display();
+            List<person> pList = phoneDiary.getList();
+            phoneTable.ItemsSource = pList;
         }
+        private void display()
+        {
+            nameLabel.Content = cPerson.getName();
+            addressLabel.Content = cPerson.getAddress();
+        }
+        private void firstContact(object sender, RoutedEventArgs e)
+        {
+            cPerson = phoneDiary.First();
+            display();
+        }
+        private void lastContact(object sender, RoutedEventArgs e)
+        {
+            cPerson = phoneDiary.Last();
+            display();
+        }
+        private void nextContact(object sender, RoutedEventArgs e)
+        {
+            cPerson = phoneDiary.Next();
+            display();
+        }
+        private void prevContact(object sender, RoutedEventArgs e)
+        {
+            cPerson = phoneDiary.Previous();
+            display();
+        }
+        private void addContact(object sender, RoutedEventArgs e)
+        { }
+        private void deleteContact(object sender, RoutedEventArgs e)
+        { }
+        private void saveContact(object sender, RoutedEventArgs e)
+        { }
+        private void printContact(object sender, RoutedEventArgs e)        
+        { }
+        
     }
 }

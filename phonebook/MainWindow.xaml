@@ -29,15 +29,25 @@
             <DockPanel Margin="0,0,0,0" MinWidth="800" MinHeight="300" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Beige">
             </DockPanel>
             <DockPanel LastChildFill="True" Margin="0,0,0,0" MinWidth="800" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Yellow">
-                <Button Name="first" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name="prev" Content="&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name="save" Content="Update" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name ="delete" Content="Delete" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name="add" Content="New" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name="next" Content="&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name ="last" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
-                <Button Name ="print" Content="Print" HorizontalAlignment="Right" Margin="25,0,25,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="first" Click="firstContact" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="prev" Click="prevContact" Content="&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="save" Click="saveContact" Content="Update" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name ="delete" Click="deleteContact" Content="Delete" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="add" Click="addContact" Content="New" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name="next" Click="nextContact" Content="&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name ="last" Click="lastContact" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
+                <Button Name ="print" Click="printContact" Content="Print" HorizontalAlignment="Right" Margin="25,0,25,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
             </DockPanel>
+            <DataGrid Name="phoneTable">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Sr" Width="30">                        
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Name" MinWidth="200">                        
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Address" Width="300">                        
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
 
     </Grid>
