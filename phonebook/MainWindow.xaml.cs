@@ -23,6 +23,7 @@ namespace phonebook
     {
         diary phoneDiary = new diary();
         person cPerson = null;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,7 +32,29 @@ namespace phonebook
             display();
             List<person> pList = phoneDiary.getList();
             phoneTable.ItemsSource = pList;
+            phoneTable.Columns[0].Width = 200;
+            // phoneTable.Columns[0].Header = "Name";
+            phoneTable.Columns[1].Width = 500;
+            // phoneTable.Columns[1].Header = "Address";
+            // phoneTable.Columns[3].Visibility= Visibility.Collapsed;
+            // phoneTable.Columns[4].Visibility= Visibility.Collapsed;
+
         }
+        private void indexRow(object sender, DataGridRowEventArgs e)
+        {
+            e.Row.Header = (e.Row.GetIndex() + 1).ToString();
+        }
+        private void cellSelected(object sender, SelectionChangedEventArgs e)
+        {
+            string data = string.Empty;
+            List<DataGridCellInfo> cells = phoneTable.SelectedCells.ToList();
+            foreach(DataGridCellInfo c in cells)
+            {
+                data = data + "," + c.Item.ToString();
+            }
+            MessageBox.Show(data);
+        }
+
         private void display()
         {
             nameLabel.Content = cPerson.getName();
@@ -63,8 +86,8 @@ namespace phonebook
         { }
         private void saveContact(object sender, RoutedEventArgs e)
         { }
-        private void printContact(object sender, RoutedEventArgs e)        
+        private void printContact(object sender, RoutedEventArgs e)
         { }
-        
+
     }
 }

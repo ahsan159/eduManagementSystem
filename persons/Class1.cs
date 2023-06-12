@@ -16,10 +16,10 @@ namespace persons
         private DateTime dob;
         private DateTime added;
         private int age;
-        private string address;
+        public string address {set;get;}
         private string city;
         private string[] contact = new string[3];
-        private string name;
+        public string name {set;get;}
         private genderType gender;
         private string picture;
         private string email;

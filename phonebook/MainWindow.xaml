@@ -38,13 +38,13 @@
                 <Button Name ="last" Click="lastContact" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
                 <Button Name ="print" Click="printContact" Content="Print" HorizontalAlignment="Right" Margin="25,0,25,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
             </DockPanel>
-            <DataGrid Name="phoneTable">
+            <DataGrid Name="phoneTable" LoadingRow="indexRow" SelectionChanged="cellSelected" SelectionUnit="FullRow">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Sr" Width="30">                        
+                    <!-- <DataGridTextColumn Header="Sr" Width="30">                        
+                    </DataGridTextColumn> -->
+                    <DataGridTextColumn Header="Name" MinWidth="200" Binding="{Binding name}">                        
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Name" MinWidth="200">                        
-                    </DataGridTextColumn>
-                    <DataGridTextColumn Header="Address" Width="300">                        
+                    <DataGridTextColumn Header="Address" Width="300" Binding="{Binding address}">                        
                     </DataGridTextColumn>
                 </DataGrid.Columns>                
             </DataGrid>
