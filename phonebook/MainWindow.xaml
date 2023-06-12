@@ -46,9 +46,8 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn Header="Address" Width="300">                        
                     </DataGridTextColumn>
-                </DataGrid.Columns>
+                </DataGrid.Columns>                
             </DataGrid>
         </StackPanel>
-
     </Grid>
 </Window>
