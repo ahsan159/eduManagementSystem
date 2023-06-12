@@ -33,3 +33,10 @@ XElement ele = d.xml();
 XDocument doc = new XDocument();
 doc.Add(ele);
 doc.Save("diary.xml");
+d.clearAll();
+Console.WriteLine("This is print by function");
+d.loadXml("diary.xml");
+foreach(person pp in d.getList())
+{
+    Console.WriteLine(pp.xml());
+}

@@ -22,6 +22,14 @@ namespace persons
         {
             personList.Remove(_p);
         }
+        public void clearAll()
+        {
+            personList.Clear();
+        }
+        public List<person> getList()
+        {
+            return personList;
+        }
         public XElement xml()
         {
             XElement ele = new XElement("phonebook");
@@ -30,6 +38,90 @@ namespace persons
                 ele.Add(p.xml());
             }
             return ele;
+        }
+
+        public void loadXml(string fileName)        
+        {
+            XDocument doc = XDocument.Load(fileName);
+            XElement ele = doc.Element("phonebook");
+            //Console.WriteLine(ele);
+            foreach(XElement e in ele.Elements())
+            {
+                //Console.WriteLine("This is element");
+                //Console.WriteLine(e);
+                Console.Write("persons");
+                loadpersonfromxml(e);
+            }
+        }
+        private void loadpersonfromxml(XElement element)
+        {
+            string firstName = string.Empty;
+            string lastName  = string.Empty;;
+            string midName  = string.Empty;
+            string address = string.Empty;
+            string city  = string.Empty;
+            string pic = string.Empty;
+            genderType gt = genderType.Other;
+            string contact0  = string.Empty;
+            string contact1 = string.Empty;
+            string email  = string.Empty;
+            DateTime added = DateTime.Now;
+            DateTime dob = DateTime.Now;
+            foreach(XElement e in element.Elements())
+            {
+                if (e.Name == "firstName")
+                {
+                    firstName = e.Value.Trim();
+                }
+                else if(e.Name == "lastName")
+                {
+                    lastName = e.Value.Trim();
+                }
+                else if(e.Name == "midName")
+                {
+                    midName = e.Value.Trim();
+                }
+                else if(e.Name == "address")
+                {
+                    address = e.Value;
+                }
+                else if(e.Name == "city")
+                {
+                    city = e.Value;
+                }
+                else if (e.Name == "email")
+                {
+                    email = e.Value;
+                }
+                else if(e.Name == "gender")
+                {
+                    if(e.Value == "Male")
+                    {
+                        gt = genderType.Male;
+                    }
+                    else if(e.Value == "Female")
+                    {
+                        gt = genderType.Female;
+                    }
+                }
+                else if(e.Name == "added")
+                {
+                    added = DateTime.ParseExact(e.Value,"dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                else if(e.Name == "dateOfBirth")
+                {
+                    dob = DateTime.ParseExact(e.Value,"dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                else if(e.Name == "contact")
+                {
+                    contact0 = e.Element("contact1").Value;
+                    contact1 = e.Element("contact2").Value;
+                }                
+            }
+            person p = new person(firstName,lastName,midName,gt,address,city,contact0,dob,pic);
+            p.addContact(contact0);
+            p.addContact(contact1);
+            personList.Add(p);
         }
     }
 }
