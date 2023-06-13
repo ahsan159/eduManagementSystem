@@ -21,11 +21,18 @@ namespace phonebook
     /// </summary>
     public partial class addnedit : Window
     {
-        public List<string> fields {get; set;}
+        public class stringWrapper
+        {
+            public string value {get;set;}
+        }
+        List<stringWrapper> wrapper = new List<stringWrapper>();
+        stringWrapper wfirstName = new stringWrapper(){value="firstName"};
+            //wfirstName.value="firstName";
         public addnedit()
         {
             InitializeComponent();
-            fields = new List<string>() {"firstName", "lastName", "Contact", "City"};                        
+            //dataEntry.ItemsSource = wrapper;                     
+            wrapper.Add(wfirstName);
         }
         private void addFunction(object sender, RoutedEventArgs e)
         { }

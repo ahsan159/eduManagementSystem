@@ -23,14 +23,14 @@ namespace phonebook
     {
         diary phoneDiary = new diary();
         person cPerson = null;
-
+        List<person> pList;
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
             phoneDiary.loadXml("diary.xml");
             cPerson = phoneDiary.First();
             display();
-            List<person> pList = phoneDiary.getList();
+            pList = phoneDiary.getList();
             phoneTable.ItemsSource = pList;
             phoneTable.Columns[0].Width = 200;
             // phoneTable.Columns[0].Header = "Name";

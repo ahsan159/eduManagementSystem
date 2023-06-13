@@ -8,9 +8,9 @@
         Title="addnedit" Height="450" Width="800">
     <Grid>
         <StackPanel>            
-        <DataGrid Margin="5,0,5,0" Name="dataEntry" >
+        <DataGrid ItemsSource="{Binding wrapper}" Margin="5,0,5,0" Name="dataEntry">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Key" Width="200"  Binding="{Binding fields}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Key" Width="200"  Binding="{Binding wrapper.value}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Value" Width="200"></DataGridTextColumn>
                 </DataGrid.Columns>                
         </DataGrid>
