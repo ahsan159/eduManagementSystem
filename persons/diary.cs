@@ -40,7 +40,7 @@ namespace persons
         }
         public person Last()
         {
-            currentPerson = personList.Count-1;
+            currentPerson = personList.Count - 1;
             return personList[currentPerson];
         }
         public void add(person _p)
@@ -150,7 +150,10 @@ namespace persons
             }
             person p = new person(firstName, lastName, midName, gt, address, city, contact0, dob, pic);
             p.addContact(contact0);
-            p.addContact(contact1);
+            if (contact1.Count() > 0)
+            {
+                p.addContact(contact1);
+            }
             p.setEmail(email);
             personList.Add(p);
         }

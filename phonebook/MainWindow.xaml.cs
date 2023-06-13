@@ -47,18 +47,48 @@ namespace phonebook
         private void cellSelected(object sender, SelectionChangedEventArgs e)
         {
             string data = string.Empty;
-            List<DataGridCellInfo> cells = phoneTable.SelectedCells.ToList();
-            foreach(DataGridCellInfo c in cells)
-            {
-                data = data + "," + c.Item.ToString();
-            }
-            MessageBox.Show(data);
+            // List<DataGridCellInfo> cells = phoneTable.SelectedCells.ToList();
+            // foreach(DataGridCellInfo c in cells)
+            // {
+            //     data = data + "," + c.Item.ToString();
+            // }
+            person cell = (person)phoneTable.SelectedItems[0];
+            //MessageBox.Show(cell.getEmail());
+            cPerson = cell;
+            display();
         }
 
         private void display()
         {
+            // top part in dock
             nameLabel.Content = cPerson.getName();
+            cityLabel.Content = cPerson.getCity();
+            string s = cPerson.getContact();
+            string[] sSplit = s.Split(',',2,StringSplitOptions.RemoveEmptyEntries);
+            if (s.Equals(","))
+            {
+                contactLabel.Content = "";
+                contact0Label.Content = "";
+                contact1Label.Content = "";
+            }
+            else 
+            {
+                contactLabel.Content = s;
+                if (sSplit.Count()==2)
+                {
+                    contact0Label.Content = sSplit[0];
+                    contact1Label.Content = sSplit[1];
+                }
+                else 
+                {
+                    contact0Label.Content = s;
+                }
+            }            
+            // middle part in dock
             addressLabel.Content = cPerson.getAddress();
+            ageLabel.Content = cPerson.getAge();
+            dobLabel.Content = cPerson.getDOB();
+            emailLabel.Content = cPerson.getEmail();
         }
         private void firstContact(object sender, RoutedEventArgs e)
         {
@@ -81,7 +111,10 @@ namespace phonebook
             display();
         }
         private void addContact(object sender, RoutedEventArgs e)
-        { }
+        { 
+            addnedit ane = new addnedit();
+            ane.Show();
+        }
         private void deleteContact(object sender, RoutedEventArgs e)
         { }
         private void saveContact(object sender, RoutedEventArgs e)

@@ -16,10 +16,11 @@ namespace persons
         private DateTime dob;
         private DateTime added;
         private int age;
-        public string address {set;get;}
+        public string address { set; get; }
         private string city;
         private string[] contact = new string[3];
-        public string name {set;get;}
+        public string name { set; get; }
+        public string contactString { set; get; }
         private genderType gender;
         private string picture;
         private string email;
@@ -44,6 +45,7 @@ namespace persons
             city = string.Empty;
             picture = string.Empty;
             email = string.Empty;
+            contactString = string.Empty;
         }
 
         public person(string fName, string lName, string mName, genderType _gender, string _address, string _city, string _phone, DateTime _DateofBirth, string _picture)
@@ -60,12 +62,18 @@ namespace persons
             //contact = new string[3];
             contact[0] = _phone;
             contact[1] = string.Empty;
+            contactString = contact[0];
             dob = _DateofBirth;
             gender = _gender;
             city = _city;
-            age = dob.Year - DateTime.Now.Year;// this age calculation needs improvement
+            age = DateTime.Now.Year - dob.Year;// this age calculation needs improvement
             picture = _picture;
             email = string.Empty;
+        }
+        public string getAge()
+        {
+            age = DateTime.Now.Year - dob.Year;
+            return age.ToString();
         }
         public string getName()
         {
@@ -90,7 +98,21 @@ namespace persons
 
                 contact[1] = _contact;
             }
-        }        
+            // contruct string for contact
+            contactString = string.Empty;
+            if (contact[0] == string.Empty && contact[1] != string.Empty)
+            {
+                contactString = contact[1];
+            }
+            else if (contact[0] != string.Empty && contact[1] == string.Empty)
+            {
+                contactString = contact[0];
+            }
+            else
+            {
+                contactString = contact[0] + "," + contact[1];
+            }
+        }
         public void removeContact(string _contact)
         {
             if (contact[0].Equals(_contact))
@@ -102,12 +124,44 @@ namespace persons
             {
                 contact[1] = string.Empty;
             }
+            // contruct string for contact
+            contactString = string.Empty;
+            if (contact[0] == string.Empty && contact[1] != string.Empty)
+            {
+                contactString = contact[1];
+            }
+            else if (contact[0] != string.Empty && contact[1] == string.Empty)
+            {
+                contactString = contact[0];
+            }
+            else
+            {
+                contactString = contact[0] + "," + contact[1];
+            }
+        }
+        public string getContact()
+        {
+            // contruct string for contact
+            contactString = string.Empty;
+            if (contact[0] == string.Empty && contact[1] != string.Empty)
+            {
+                contactString = contact[1];
+            }
+            else if (contact[0] != string.Empty && contact[1] == string.Empty)
+            {
+                contactString = contact[0];
+            }
+            else
+            {
+                contactString = contact[0] + "," + contact[1];
+            }
+            return contactString;
         }
         public genderType getGender()
         {
             return gender;
         }
-        public void setGender (genderType g)
+        public void setGender(genderType g)
         {
             gender = g;
         }
@@ -116,9 +170,9 @@ namespace persons
         {
             dob = _dt;
             int y = (DateTime.Now.Year - dob.Year);
-            int z = (DateTime.Now.Month > dob.Month) && (DateTime.Now.Day>dob.Day)?0:1;            
+            int z = (DateTime.Now.Month > dob.Month) && (DateTime.Now.Day > dob.Day) ? 0 : 1;
             //age = a.Duration;
-            age = y - z;            
+            age = y - z;
         }
 
         public DateTime getDOB()
@@ -146,27 +200,27 @@ namespace persons
         public override string ToString()
         {
             string s = string.Empty;
-            s = firstName + "," + lastName + "," + midName +"," + gender  + "," + age +"," + address + "," + city + "," + contact[0] + "," + contact[1] ;
+            s = firstName + "," + lastName + "," + midName + "," + gender + "," + age + "," + address + "," + city + "," + contact[0] + "," + contact[1];
             return s;
         }
         public string JSON()
         {
             string s = string.Empty;
-            s = "{" + Environment.NewLine + 
-                "firstName: \"" + firstName + "\"" + Environment.NewLine + 
-                "lastName: \"" + lastName +  "\"" + Environment.NewLine + 
-                "middleName: \"" + midName +  "\"" + Environment.NewLine + 
-                "age: \"" + age +  "\"" + Environment.NewLine + 
-                "gender: \"" + gender +  "\"" + Environment.NewLine + 
-                "address: \"" + address +  "\"" + Environment.NewLine + 
-                "city: \"" + city +  "\"" + Environment.NewLine + 
-                "contact0: \"" + contact[0] +  "\"" + Environment.NewLine + 
-                "contact1: \"" + contact[1] +  "\"" + Environment.NewLine + 
-                "email: \"" + email +  "\"" + Environment.NewLine + 
-                "dateAdded: \"" + added.ToString("dd/MM/yyyy") +  "\"" + Environment.NewLine + 
-                "DOB: \"" + dob.ToString("dd/MM/yyyy") +  "\"" + Environment.NewLine + 
-                "}";                
-            return s;            
+            s = "{" + Environment.NewLine +
+                "firstName: \"" + firstName + "\"" + Environment.NewLine +
+                "lastName: \"" + lastName + "\"" + Environment.NewLine +
+                "middleName: \"" + midName + "\"" + Environment.NewLine +
+                "age: \"" + age + "\"" + Environment.NewLine +
+                "gender: \"" + gender + "\"" + Environment.NewLine +
+                "address: \"" + address + "\"" + Environment.NewLine +
+                "city: \"" + city + "\"" + Environment.NewLine +
+                "contact0: \"" + contact[0] + "\"" + Environment.NewLine +
+                "contact1: \"" + contact[1] + "\"" + Environment.NewLine +
+                "email: \"" + email + "\"" + Environment.NewLine +
+                "dateAdded: \"" + added.ToString("dd/MM/yyyy") + "\"" + Environment.NewLine +
+                "DOB: \"" + dob.ToString("dd/MM/yyyy") + "\"" + Environment.NewLine +
+                "}";
+            return s;
         }
         public XElement xml()
         {
@@ -196,7 +250,7 @@ namespace persons
             XdateAdded.Value = added.ToString("dd/MM/yyyy");
             ele.Add(XdateAdded);
 
-            XElement Xdob  = new XElement("dateOfBirth");
+            XElement Xdob = new XElement("dateOfBirth");
             Xdob.Value = dob.ToString("dd/MM/yyyy");
             ele.Add(Xdob);
 
@@ -209,7 +263,7 @@ namespace persons
             ele.Add(Xemail);
 
             XElement Xcontact = new XElement("contact");
-            XElement xc1 = new XElement("contact1");            
+            XElement xc1 = new XElement("contact1");
             xc1.Value = contact[0];
             Xcontact.Add(xc1);
             XElement xc2 = new XElement("contact2");

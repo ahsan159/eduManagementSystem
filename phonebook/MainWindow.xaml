@@ -20,13 +20,39 @@
                 </Grid>
                 <Grid Grid.Column="2">
                     <StackPanel Background="Bisque">
-                        <Label Name="nameLabel" Height="50" Margin="20,50,0,0" Background="BlanchedAlmond" Content="Name" FontSize="36"></Label>
-                        <Label Name="contactLabel"  Height="30" Margin="20,10,0,0" Background="BlanchedAlmond" Content="Contact" FontSize="16"></Label>
-                        <Label Name="addressLabel" Height="30" Margin="20,10,0,0" Background="BlanchedAlmond" Content="Address" FontSize="16"></Label>
+                        <Label Name="nameLabel" Height="50" Margin="20,50,0,0"  Content="Name" FontSize="36"></Label>
+                        <Label Name="contactLabel"  Height="30" Margin="20,10,0,0"  Content="Contact" FontSize="16"></Label>
+                        <Label Name="cityLabel" Height="30" Margin="20,10,0,0"  Content="Address" FontSize="16"></Label>
                     </StackPanel>
                 </Grid>
             </DockPanel>
             <DockPanel Margin="0,0,0,0" MinWidth="800" MinHeight="300" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Beige">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MaxWidth="300"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel>
+                        <Label Name="adderssDisp" Height="30" Margin="20,10,0,0"  Content="Address" FontSize="14" HorizontalAlignment="Left"></Label>
+                        <Label Name="dobDisp" Height="30" Margin="20,10,0,0"  Content="DOB" FontSize="14" HorizontalAlignment="Left"></Label>
+                        <Label Name="ageDisp" Height="30" Margin="20,10,0,0"  Content="Age" FontSize="14" HorizontalAlignment="Left"></Label>
+                        <Label Name="contact0Disp" Height="30" Margin="20,10,0,0"  Content="Contact1" FontSize="14" HorizontalAlignment="Left"></Label>
+                        <Label Name="contact1Disp" Height="30" Margin="20,10,0,0"  Content="Contact2" FontSize="14" HorizontalAlignment="Left"></Label>
+                        <Label Name="emailDisp" Height="30" Margin="20,10,0,0"  Content="Email" FontSize="14" HorizontalAlignment="Left"></Label>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <StackPanel>
+                        <Label Name="addressLabel" Height="30" Margin="20,10,0,0" Content="Address" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+                        <Label Name="dobLabel" Height="30" Margin="20,10,0,0" Content="DOB" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+                        <Label Name="ageLabel" Height="30" Margin="20,10,0,0" Content="Age" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+                        <Label Name="contact0Label" Height="30" Margin="20,10,0,0" Content="Contact1" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+                        <Label Name="contact1Label" Height="30" Margin="20,10,0,0" Content="Contact2" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+                        <Label Name="emailLabel" Height="30" Margin="20,10,0,0" Content="Email" FontSize="14" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+                    </StackPanel>                    
+                </Grid>
             </DockPanel>
             <DockPanel LastChildFill="True" Margin="0,0,0,0" MinWidth="800" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="Yellow">
                 <Button Name="first" Click="firstContact" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
@@ -38,13 +64,15 @@
                 <Button Name ="last" Click="lastContact" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
                 <Button Name ="print" Click="printContact" Content="Print" HorizontalAlignment="Right" Margin="25,0,25,10" VerticalAlignment="Bottom" RenderTransformOrigin="1.459,1.585" Width="52" Height="40"/>
             </DockPanel>
-            <DataGrid Name="phoneTable" LoadingRow="indexRow" SelectionChanged="cellSelected" SelectionUnit="FullRow">
+            <DataGrid Name="phoneTable" LoadingRow="indexRow" SelectionChanged="cellSelected" SelectionUnit="FullRow" Margin="20,0,20,0">
                 <DataGrid.Columns>
                     <!-- <DataGridTextColumn Header="Sr" Width="30">                        
                     </DataGridTextColumn> -->
                     <DataGridTextColumn Header="Name" MinWidth="200" Binding="{Binding name}">                        
                     </DataGridTextColumn>
                     <DataGridTextColumn Header="Address" Width="300" Binding="{Binding address}">                        
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Contact" Width="300" Binding="{Binding contactString}">                        
                     </DataGridTextColumn>
                 </DataGrid.Columns>                
             </DataGrid>

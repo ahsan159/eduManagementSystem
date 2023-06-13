@@ -14,7 +14,7 @@
 </ItemGroup>  
   <ItemGroup>
   <Reference Include="person">
-  <HintPath>./person.dll</HintPath>
+  <HintPath>../persons/person.dll</HintPath>
   </Reference>
   </ItemGroup>
 </Project>
