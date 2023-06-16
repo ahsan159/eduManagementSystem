@@ -21,24 +21,37 @@ namespace phonebook
     /// </summary>
     public partial class addnedit : Window
     {
-        public class stringWrapper
-        {
-            public string value {get;set;}
-        }
-        List<stringWrapper> wrapper = new List<stringWrapper>();
-        stringWrapper wfirstName = new stringWrapper(){value="firstName"};
-            //wfirstName.value="firstName";
+        // public Dictionary<string,string> dict{get;set;}
+        public List<Object> dict;
         public addnedit()
         {
-            InitializeComponent();
-            //dataEntry.ItemsSource = wrapper;                     
-            wrapper.Add(wfirstName);
+            InitializeComponent();                     
+            dict = new List<Object>(){
+                new {Key="First Name",Value=""},
+                new {Key="Mid Name",Value=""},
+                new {Key="Last Name",Value=""},
+                new {Key="Gender",Value=""},
+                new {Key="Date of Birth",Value=""},
+                new {Key="Address",Value=""},
+                new {Key="City",Value=""},
+                new {Key="Contact 1",Value=""},
+                new {Key="Contact 2",Value=""}
+            };            
+        dataEntry.ItemsSource = dict;
+
         }
         private void addFunction(object sender, RoutedEventArgs e)
-        { }
+        { 
+            // MessageBox.Show(dict["Address"]);
+        }
         private void cancelFunction(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void cellSelected(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

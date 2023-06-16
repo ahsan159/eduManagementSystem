@@ -55,7 +55,7 @@ namespace phonebook
             person cell = (person)phoneTable.SelectedItems[0];
             //MessageBox.Show(cell.getEmail());
             cPerson = cell;
-            display();
+            display();            
         }
 
         private void display()
