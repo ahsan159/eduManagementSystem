@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Xml;
+using System.Xml.Linq;
 using persons;
 
 namespace phonebook
@@ -26,7 +29,7 @@ namespace phonebook
         List<person> pList;
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
             phoneDiary.loadXml("diary.xml");
             cPerson = phoneDiary.First();
             display();
@@ -55,7 +58,7 @@ namespace phonebook
             person cell = (person)phoneTable.SelectedItems[0];
             //MessageBox.Show(cell.getEmail());
             cPerson = cell;
-            display();            
+            display();
         }
 
         private void display()
@@ -64,26 +67,26 @@ namespace phonebook
             nameLabel.Content = cPerson.getName();
             cityLabel.Content = cPerson.getCity();
             string s = cPerson.getContact();
-            string[] sSplit = s.Split(',',2,StringSplitOptions.RemoveEmptyEntries);
+            string[] sSplit = s.Split(',', 2, StringSplitOptions.RemoveEmptyEntries);
             if (s.Equals(","))
             {
                 contactLabel.Content = "";
                 contact0Label.Content = "";
                 contact1Label.Content = "";
             }
-            else 
+            else
             {
                 contactLabel.Content = s;
-                if (sSplit.Count()==2)
+                if (sSplit.Count() == 2)
                 {
                     contact0Label.Content = sSplit[0];
                     contact1Label.Content = sSplit[1];
                 }
-                else 
+                else
                 {
                     contact0Label.Content = s;
                 }
-            }            
+            }
             // middle part in dock
             addressLabel.Content = cPerson.getAddress();
             ageLabel.Content = cPerson.getAge();
@@ -111,14 +114,106 @@ namespace phonebook
             display();
         }
         private void addContact(object sender, RoutedEventArgs e)
-        { 
+        {
             addnedit ane = new addnedit();
-            ane.Show();
+            ane.ShowDialog();
+            if (ane.closeStatus)
+            {
+                person p = ane.personData;
+                phoneDiary.add(p);
+                try
+                {
+                    if (File.Exists("diary.xml"))
+                    {
+                        File.Delete("diary.xml");
+                    }
+                    XDocument doc = new XDocument();
+                    doc.Add(phoneDiary.xml());
+                    doc.Save("diary.xml");
+                    phoneDiary.clearAll();
+                    phoneDiary.loadXml("diary.xml");
+                    pList = phoneDiary.getList();
+                    cPerson = phoneDiary.Last();
+                    display();
+                    try
+                    {
+                        phoneTable.Items.Refresh();
+                    }
+                    catch (Exception exp)
+                    {
+                        //MessageBox.Show(exp.Message, exp.Source);
+                    }
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show(exp.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }                
+            }            
         }
         private void deleteContact(object sender, RoutedEventArgs e)
-        { }
+        {
+            phoneDiary.remove(cPerson);
+            cPerson = phoneDiary.Next();
+            display();
+            if (File.Exists("diary.xml"))
+            {
+                File.Delete("diary.xml");
+            }
+            XDocument doc = new XDocument();
+            doc.Add(phoneDiary.xml());
+            doc.Save("diary.xml");
+            phoneDiary.clearAll();
+            phoneDiary.loadXml("diary.xml");
+            pList = phoneDiary.getList();
+            try
+            {
+                phoneTable.Items.Refresh();
+            }
+            catch (Exception exp)
+            {
+                //MessageBox.Show(exp.Message,exp.Source);
+            }
+            
+        }
         private void saveContact(object sender, RoutedEventArgs e)
-        { }
+        {
+            addnedit updateBox = new addnedit(cPerson);
+            updateBox.ShowDialog();
+            if(updateBox.closeStatus) 
+            {
+                phoneDiary.remove(cPerson);
+                person pUpdated = updateBox.personData;
+                phoneDiary.add(pUpdated);
+                try
+                {
+                    if (File.Exists("diary.xml"))
+                    {
+                        File.Delete("diary.xml");
+                    }
+                    XDocument doc = new XDocument();
+                    doc.Add(phoneDiary.xml());
+                    doc.Save("diary.xml");
+                    phoneDiary.clearAll();
+                    phoneDiary.loadXml("diary.xml");
+                    pList = phoneDiary.getList();
+                    cPerson = phoneDiary.Last();
+                    display();
+                    try
+                    {
+                        phoneTable.Items.Refresh();
+                    }
+                    catch (Exception exp)
+                    {
+                        //MessageBox.Show(exp.Message, exp.Source);
+                    }
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show(exp.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }       
+            }
+
+        }
         private void printContact(object sender, RoutedEventArgs e)
         { }
 

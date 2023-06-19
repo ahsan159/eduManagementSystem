@@ -2,6 +2,21 @@
 <phonebook>
   <person>
     <firstName>Muhammad</firstName>
+    <lastName>Ahsan</lastName>
+    <midName></midName>
+    <address>254-A, Alhmad Colony, AIT</address>
+    <city>Lahore</city>
+    <added>19/06/2023</added>
+    <dateOfBirth>21/12/1987</dateOfBirth>
+    <gender>Male</gender>
+    <email>mahsan159@live.com</email>
+    <contact>
+      <contact1></contact1>
+      <contact2></contact2>
+    </contact>
+  </person>
+  <person>
+    <firstName>Muhammad</firstName>
     <lastName>Shahid</lastName>
     <midName>Ehsan</midName>
     <address>Muslim Town</address>
@@ -76,18 +91,18 @@
     </contact>
   </person>
   <person>
-    <firstName>Muhammad  Ahsan</firstName>
-    <lastName></lastName>
+    <firstName>Azmat</firstName>
+    <lastName>Ali</lastName>
     <midName></midName>
-    <address>254-A, Alhmad Colony, AIT</address>
+    <address>Kasur</address>
     <city>Lahore</city>
     <added>19/06/2023</added>
     <dateOfBirth>19/06/2023</dateOfBirth>
     <gender>Male</gender>
-    <email>mahsan159@live.com</email>
+    <email></email>
     <contact>
-      <contact1>0331-4042024</contact1>
-      <contact2>,</contact2>
+      <contact1></contact1>
+      <contact2></contact2>
     </contact>
   </person>
 </phonebook>

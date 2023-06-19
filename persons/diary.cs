@@ -71,8 +71,7 @@ namespace persons
 
         public void loadXml(string fileName)
         {
-            XDocument doc = XDocument.Load(fileName);
-
+            XDocument doc = XDocument.Load(fileName);           
             XElement ele = doc.Element("phonebook");
             //Console.WriteLine(ele);
             foreach (XElement e in ele.Elements())

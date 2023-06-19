@@ -18,7 +18,7 @@
          SelectionChanged="cellSelected"
          IsReadOnly="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn IsReadOnly="False" Header="Key" Width="200"  Binding="{Binding Key}"></DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Header="Key" Width="200"  Binding="{Binding Key}"></DataGridTextColumn>
                     <DataGridTextColumn IsReadOnly="False" Header="Value" Width="200" Binding="{Binding Value}"></DataGridTextColumn>
                 </DataGrid.Columns>                
         </DataGrid>

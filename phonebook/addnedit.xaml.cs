@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Linq;
 using persons;
 
 namespace phonebook
@@ -22,27 +24,72 @@ namespace phonebook
     public partial class addnedit : Window
     {
         // public Dictionary<string,string> dict{get;set;}
-        public List<Object> dict;
+        public bool closeStatus = false;
+        public person personData = null;
+        public List<myDictionary> dict;
+        public class myDictionary         
+        {
+            public string Key {get;set;}
+            public string Value{get;set;}
+
+            public myDictionary()
+            {
+                Key = string.Empty;
+                Value = string.Empty;
+            }
+        }
         public addnedit()
         {
             InitializeComponent();                     
-            dict = new List<Object>(){
-                new {Key="First Name",Value=""},
-                new {Key="Mid Name",Value=""},
-                new {Key="Last Name",Value=""},
-                new {Key="Gender",Value=""},
-                new {Key="Date of Birth",Value=""},
-                new {Key="Address",Value=""},
-                new {Key="City",Value=""},
-                new {Key="Contact 1",Value=""},
-                new {Key="Contact 2",Value=""}
-            };            
-        dataEntry.ItemsSource = dict;
+            dict = new List<myDictionary>(){
+                new myDictionary{Key="First Name",Value=""},
+                new myDictionary{Key="Mid Name",Value=""},
+                new myDictionary{Key="Last Name",Value=""},
+                new myDictionary{Key="Gender",Value=""},
+                new myDictionary{Key="Date of Birth",Value=""},
+                new myDictionary{Key="Address",Value=""},
+                new myDictionary{Key="City",Value=""},
+                new myDictionary{Key="Contact 1",Value=""},
+                new myDictionary{Key="Contact 2",Value=""},
+                new myDictionary{Key="Email",Value=""}
+            };                 
+            dataEntry.ItemsSource = dict;
 
+        }
+        public addnedit(person p)
+        {
+            InitializeComponent();                     
+            dict = new List<myDictionary>(){
+                new myDictionary{Key="First Name",Value=p.name},
+                new myDictionary{Key="Mid Name",Value=""},
+                new myDictionary{Key="Last Name",Value=""},
+                new myDictionary{Key="Gender",Value=p.getGender().ToString()},
+                new myDictionary{Key="Date of Birth",Value=p.getDOB().ToString("dd/MM/yyyy")},
+                new myDictionary{Key="Address",Value=p.getAddress()},
+                new myDictionary{Key="City",Value=p.getCity()},
+                new myDictionary{Key="Contact 1",Value=p.getContact()},
+                new myDictionary{Key="Contact 2",Value=p.getContact()},
+                new myDictionary{Key="Email",Value=p.getEmail()}
+            };            
+            dataEntry.ItemsSource = dict;            
         }
         private void addFunction(object sender, RoutedEventArgs e)
         { 
-            // MessageBox.Show(dict["Address"]);
+            // MessageBox.Show(dict["Address"]);                   
+            genderType gt = genderType.Other;
+            if(dict[3].Value.ToUpper().Equals("MALE") || dict[3].Value.ToUpper().Equals("M"))
+            {
+                gt = genderType.Male;
+            }
+            else if (dict[3].Value.ToUpper().Equals("FEMALE") || dict[3].Value.ToUpper().Equals("F"))
+            {
+                gt = genderType.Female;
+            }
+            personData = new person(dict[0].Value,dict[2].Value,dict[1].Value,gt,dict[5].Value,dict[6].Value,dict[7].Value,DateTime.Now,string.Empty);
+            personData.addContact(dict[8].Value);
+            personData.setEmail(dict[9].Value);
+            closeStatus= true;
+            this.Close();
         }
         private void cancelFunction(object sender, RoutedEventArgs e)
         {
