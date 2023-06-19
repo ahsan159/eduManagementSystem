@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="contactPrint.xsl"?>
+<person>
+  <firstName>Muhammad</firstName>
+  <lastName>Shahid</lastName>
+  <midName>Ehsan</midName>
+  <address>Muslim Town</address>
+  <city>Lahore</city>
+  <added>19/06/2023</added>
+  <dateOfBirth>05/10/1983</dateOfBirth>
+  <gender>Male</gender>
+  <email>ehsan.shahid@gmail.com</email>
+  <contact>
+    <contact1>0321-5638140</contact1>
+    <contact2>0321-5638140</contact2>
+  </contact>
+</person>

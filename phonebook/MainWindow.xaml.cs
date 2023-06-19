@@ -215,7 +215,16 @@ namespace phonebook
 
         }
         private void printContact(object sender, RoutedEventArgs e)
-        { }
+        { 
+            XElement ele = cPerson.xml();
+            XDocument doc = new XDocument();
+            doc.Add(ele);
+            if (File.Exists("printContact.xml"))
+            {
+                File.Delete("printContact.xml");
+            }
+            doc.Save("printContact.xml");
+        }
 
     }
 }
