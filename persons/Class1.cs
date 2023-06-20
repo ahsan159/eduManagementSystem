@@ -87,8 +87,41 @@ namespace persons
         {
             return address;
         }
+        public string getContact0()
+        {
+            
+            try {return contact[0];}
+            catch(Exception){return string.Empty;}
+        }
+        public string getContact1()
+        {
+            
+            try {return contact[1];}
+            catch(Exception){return string.Empty;}
+        }
+        public void setContact0(string _c)
+        {
+            contact[0] = _c;
+        }
+        public void setContact1(string _c)
+        {
+            contact[1] = _c;
+        }
         public void addContact(string _contact)
         {
+            if(_contact.Length==0)
+            {
+                contact[0] = string.Empty;
+                contact[1] = string.Empty;
+                return;
+            }
+            if(_contact.Equals(","))
+            {
+                contact[0] = string.Empty;
+                contact[1] = string.Empty;
+                return;
+            }
+            
             if (contact[0].Length == 0)
             {
                 contact[0] = _contact;

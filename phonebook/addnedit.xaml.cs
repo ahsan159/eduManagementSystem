@@ -27,10 +27,10 @@ namespace phonebook
         public bool closeStatus = false;
         public person personData = null;
         public List<myDictionary> dict;
-        public class myDictionary         
+        public class myDictionary
         {
-            public string Key {get;set;}
-            public string Value{get;set;}
+            public string Key { get; set; }
+            public string Value { get; set; }
 
             public myDictionary()
             {
@@ -40,7 +40,7 @@ namespace phonebook
         }
         public addnedit()
         {
-            InitializeComponent();                     
+            InitializeComponent();
             dict = new List<myDictionary>(){
                 new myDictionary{Key="First Name",Value=""},
                 new myDictionary{Key="Mid Name",Value=""},
@@ -52,32 +52,33 @@ namespace phonebook
                 new myDictionary{Key="Contact 1",Value=""},
                 new myDictionary{Key="Contact 2",Value=""},
                 new myDictionary{Key="Email",Value=""}
-            };                 
+            };
             dataEntry.ItemsSource = dict;
 
         }
         public addnedit(person p)
         {
-            InitializeComponent();                     
+            InitializeComponent();
+
             dict = new List<myDictionary>(){
-                new myDictionary{Key="First Name",Value=p.name},
-                new myDictionary{Key="Mid Name",Value=""},
-                new myDictionary{Key="Last Name",Value=""},
+                new myDictionary{Key="First Name",Value=p.name.Split(' ')[0]},
+                new myDictionary{Key="Mid Name",Value=p.name.Split(' ')[1]},
+                new myDictionary{Key="Last Name",Value=p.name.Split(' ')[2]},
                 new myDictionary{Key="Gender",Value=p.getGender().ToString()},
                 new myDictionary{Key="Date of Birth",Value=p.getDOB().ToString("dd/MM/yyyy")},
                 new myDictionary{Key="Address",Value=p.getAddress()},
                 new myDictionary{Key="City",Value=p.getCity()},
-                new myDictionary{Key="Contact 1",Value=p.getContact()},
-                new myDictionary{Key="Contact 2",Value=p.getContact()},
+                new myDictionary{Key="Contact 1",Value=p.getContact0()},
+                new myDictionary{Key="Contact 2",Value=p.getContact1()},
                 new myDictionary{Key="Email",Value=p.getEmail()}
-            };            
-            dataEntry.ItemsSource = dict;            
+            };
+            dataEntry.ItemsSource = dict;
         }
         private void addFunction(object sender, RoutedEventArgs e)
-        { 
+        {
             // MessageBox.Show(dict["Address"]);                   
             genderType gt = genderType.Other;
-            if(dict[3].Value.ToUpper().Equals("MALE") || dict[3].Value.ToUpper().Equals("M"))
+            if (dict[3].Value.ToUpper().Equals("MALE") || dict[3].Value.ToUpper().Equals("M"))
             {
                 gt = genderType.Male;
             }
@@ -85,10 +86,19 @@ namespace phonebook
             {
                 gt = genderType.Female;
             }
-            personData = new person(dict[0].Value,dict[2].Value,dict[1].Value,gt,dict[5].Value,dict[6].Value,dict[7].Value,DateTime.Now,string.Empty);
+            DateTime dob = DateTime.Now;
+            try
+            {
+                dob = DateTime.ParseExact(dict[4].Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            }
+            catch (Exception)
+            {
+                dob = DateTime.ParseExact(dict[4].Value, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            }
+            personData = new person(dict[0].Value, dict[2].Value, dict[1].Value, gt, dict[5].Value, dict[6].Value, dict[7].Value, dob, string.Empty);
             personData.addContact(dict[8].Value);
             personData.setEmail(dict[9].Value);
-            closeStatus= true;
+            closeStatus = true;
             this.Close();
         }
         private void cancelFunction(object sender, RoutedEventArgs e)
@@ -98,7 +108,7 @@ namespace phonebook
 
         private void cellSelected(object sender, SelectionChangedEventArgs e)
         {
-            
+
         }
     }
 }

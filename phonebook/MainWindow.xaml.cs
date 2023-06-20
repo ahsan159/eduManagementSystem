@@ -184,6 +184,7 @@ namespace phonebook
                 phoneDiary.remove(cPerson);
                 person pUpdated = updateBox.personData;
                 phoneDiary.add(pUpdated);
+                //MessageBox.Show("now");
                 try
                 {
                     if (File.Exists("diary.xml"))

@@ -2,92 +2,62 @@
 <phonebook>
   <person>
     <firstName>Muhammad</firstName>
-    <lastName>Shahid</lastName>
-    <midName>Ehsan</midName>
-    <address>Muslim Town</address>
+    <lastName>Ahsan</lastName>
+    <midName></midName>
+    <address>Alhmad Colony</address>
     <city>Lahore</city>
-    <added>19/06/2023</added>
-    <dateOfBirth>05/10/1983</dateOfBirth>
+    <added>19-06-2023</added>
+    <dateOfBirth>21-12-1987</dateOfBirth>
     <gender>Male</gender>
-    <email>ehsan.shahid@gmail.com</email>
+    <email>muhammad.ahsan@gmail.com</email>
     <contact>
-      <contact1>0321-5638140</contact1>
-      <contact2>0321-5638140</contact2>
-    </contact>
-  </person>
-  <person>
-    <firstName>Rukhsar</firstName>
-    <lastName>Butt</lastName>
-    <midName>Ahmad</midName>
-    <address>Johar Town</address>
-    <city>Lahore</city>
-    <added>19/06/2023</added>
-    <dateOfBirth>05/10/1983</dateOfBirth>
-    <gender>Male</gender>
-    <email>rukhsarahmad2017@gmail.com</email>
-    <contact>
-      <contact1>042-99024248</contact1>
+      <contact1>042-99024200</contact1>
       <contact2>042-99024248</contact2>
-    </contact>
-  </person>
-  <person>
-    <firstName>Hammad</firstName>
-    <lastName>Riaz</lastName>
-    <midName></midName>
-    <address>SUPARCO</address>
-    <city>Lahore</city>
-    <added>19/06/2023</added>
-    <dateOfBirth>19/06/2023</dateOfBirth>
-    <gender>Male</gender>
-    <email></email>
-    <contact>
-      <contact1>034799024248</contact1>
-      <contact2>034799024248</contact2>
-    </contact>
-  </person>
-  <person>
-    <firstName>Adnad</firstName>
-    <lastName>Ahmad</lastName>
-    <midName></midName>
-    <address>F-11</address>
-    <city>Islamabad</city>
-    <added>19/06/2023</added>
-    <dateOfBirth>19/06/2023</dateOfBirth>
-    <gender>Male</gender>
-    <email></email>
-    <contact>
-      <contact1>0323-25472547</contact1>
-      <contact2>0323-25472547</contact2>
     </contact>
   </person>
   <person>
     <firstName>Muhammad</firstName>
     <lastName>Yaseen</lastName>
     <midName></midName>
-    <address>Hafixabad</address>
+    <address>Hafizabad</address>
     <city>Lahore</city>
-    <added>19/06/2023</added>
-    <dateOfBirth>19/06/2023</dateOfBirth>
+    <added>19-06-2023</added>
+    <dateOfBirth>01-03-1988</dateOfBirth>
     <gender>Male</gender>
-    <email></email>
+    <email>N/A</email>
+    <contact>
+      <contact1>042-99024248</contact1>
+      <contact2>042-99024249</contact2>
+    </contact>
+  </person>
+  <person>
+    <firstName>Rukhsar</firstName>
+    <lastName>Ahmad</lastName>
+    <midName></midName>
+    <address>Mangowale</address>
+    <city>Gujrat</city>
+    <added>19-06-2023</added>
+    <dateOfBirth>01-01-1988</dateOfBirth>
+    <gender>Male</gender>
+    <email>rukhsar.ahmad@gmail.com</email>
     <contact>
       <contact1></contact1>
       <contact2></contact2>
     </contact>
   </person>
   <person>
-    <firstName>Muhammad  Ahsan</firstName>
-    <lastName></lastName>
-    <midName></midName>
-    <address>254-A, Alhmad Colony, AIT</address>
-    <city>Lahore</city>
-    <added>19/06/2023</added>
-    <dateOfBirth>19/06/2023</dateOfBirth>
+    <firstName>Uaid</firstName>
+    <lastName>Rehman</lastName>
+    <midName>ur </midName>
+    <address>Multan</address>
+    <city>Punjab</city>
+    <added>19-06-2023</added>
+    <dateOfBirth>01-10-1988</dateOfBirth>
     <gender>Male</gender>
-    <email>mahsan159@live.com</email>
+    <email>ubaidrhmn@gov.pk</email>
     <contact>
-      <contact1>0331-4042024</contact1>
-      <contact2>,</contact2>
+      <contact1>042-99024206</contact1>
+      <contact2></contact2>
     </contact>
   </person>
 </phonebook>

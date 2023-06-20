@@ -71,7 +71,7 @@ namespace persons
 
         public void loadXml(string fileName)
         {
-            XDocument doc = XDocument.Load(fileName);           
+            XDocument doc = XDocument.Load(fileName);
             XElement ele = doc.Element("phonebook");
             //Console.WriteLine(ele);
             foreach (XElement e in ele.Elements())
@@ -135,11 +135,26 @@ namespace persons
                 }
                 else if (e.Name == "added")
                 {
-                    added = DateTime.ParseExact(e.Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
+                    try
+                    {
+                        added = DateTime.ParseExact(e.Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    }
+                    catch (Exception exption)
+                    {
+                        added = DateTime.ParseExact(e.Value, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    }
                 }
                 else if (e.Name == "dateOfBirth")
                 {
-                    dob = DateTime.ParseExact(e.Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    try
+                    {
+                        dob = DateTime.ParseExact(e.Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    }
+                    catch (Exception exption)
+                    {
+                        dob = DateTime.ParseExact(e.Value, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    }
                 }
                 else if (e.Name == "contact")
                 {
@@ -147,12 +162,9 @@ namespace persons
                     contact1 = e.Element("contact2").Value;
                 }
             }
-            person p = new person(firstName, lastName, midName, gt, address, city, contact0, dob, pic);
+            person p = new person(firstName, lastName, midName, gt, address, city, string.Empty, dob, pic);
             p.addContact(contact0);
-            if (contact1.Count() > 0)
-            {
-                p.addContact(contact1);
-            }
+            p.addContact(contact1);
             p.setEmail(email);
             personList.Add(p);
         }
