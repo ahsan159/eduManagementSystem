@@ -180,7 +180,7 @@ namespace phonebook
             addnedit updateBox = new addnedit(cPerson);
             updateBox.ShowDialog();
             if(updateBox.closeStatus) 
-            {
+            {                
                 phoneDiary.remove(cPerson);
                 person pUpdated = updateBox.personData;
                 phoneDiary.add(pUpdated);

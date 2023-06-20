@@ -6,8 +6,8 @@
     <midName></midName>
     <address>Alhmad Colony</address>
     <city>Lahore</city>
-    <added>19-06-2023</added>
-    <dateOfBirth>21-12-1987</dateOfBirth>
+    <added>20/06/2023</added>
+    <dateOfBirth>21/12/1987</dateOfBirth>
     <gender>Male</gender>
     <email>muhammad.ahsan@gmail.com</email>
     <contact>
@@ -16,28 +16,13 @@
     </contact>
   </person>
   <person>
-    <firstName>Muhammad</firstName>
-    <lastName>Yaseen</lastName>
-    <midName></midName>
-    <address>Hafizabad</address>
-    <city>Lahore</city>
-    <added>19-06-2023</added>
-    <dateOfBirth>01-03-1988</dateOfBirth>
-    <gender>Male</gender>
-    <email>N/A</email>
-    <contact>
-      <contact1>042-99024248</contact1>
-      <contact2>042-99024249</contact2>
-    </contact>
-  </person>
-  <person>
     <firstName>Rukhsar</firstName>
     <lastName>Ahmad</lastName>
     <midName></midName>
     <address>Mangowale</address>
     <city>Gujrat</city>
-    <added>19-06-2023</added>
-    <dateOfBirth>01-01-1988</dateOfBirth>
+    <added>20/06/2023</added>
+    <dateOfBirth>01/01/1988</dateOfBirth>
     <gender>Male</gender>
     <email>rukhsar.ahmad@gmail.com</email>
     <contact>
@@ -48,16 +33,46 @@
   <person>
     <firstName>Uaid</firstName>
     <lastName>Rehman</lastName>
-    <midName>ur </midName>
+    <midName>ur</midName>
     <address>Multan</address>
     <city>Punjab</city>
-    <added>19-06-2023</added>
-    <dateOfBirth>01-10-1988</dateOfBirth>
+    <added>20/06/2023</added>
+    <dateOfBirth>01/10/1988</dateOfBirth>
     <gender>Male</gender>
     <email>ubaidrhmn@gov.pk</email>
     <contact>
       <contact1>042-99024206</contact1>
       <contact2></contact2>
+    </contact>
+  </person>
+  <person>
+    <firstName>Adnan</firstName>
+    <lastName>Ahmad</lastName>
+    <midName></midName>
+    <address>F-11</address>
+    <city>Islamabad</city>
+    <added>20/06/2023</added>
+    <dateOfBirth>01/10/1995</dateOfBirth>
+    <gender>Male</gender>
+    <email>Adnan@suparco.gov.pk</email>
+    <contact>
+      <contact1>042-99024248</contact1>
+      <contact2></contact2>
+    </contact>
+  </person>
+  <person>
+    <firstName>Muhammad</firstName>
+    <lastName>Yaseen</lastName>
+    <midName></midName>
+    <address>Hafizabad</address>
+    <city>Lahore</city>
+    <added>20/06/2023</added>
+    <dateOfBirth>01/03/1988</dateOfBirth>
+    <gender>Male</gender>
+    <email>N/A</email>
+    <contact>
+      <contact1>042-99024248</contact1>
+      <contact2>042-99024249</contact2>
     </contact>
   </person>
 </phonebook>

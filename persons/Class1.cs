@@ -89,39 +89,72 @@ namespace persons
         }
         public string getContact0()
         {
-            
-            try {return contact[0];}
-            catch(Exception){return string.Empty;}
+
+            try { return contact[0]; }
+            catch (Exception) { return string.Empty; }
         }
         public string getContact1()
         {
-            
-            try {return contact[1];}
-            catch(Exception){return string.Empty;}
+
+            try { return contact[1]; }
+            catch (Exception) { return string.Empty; }
         }
         public void setContact0(string _c)
         {
             contact[0] = _c;
+            if (contact[1].Length == 0 && contact[0].Length == 0)
+            {
+                contactString = string.Empty;
+            }
+            else if (contact[1].Length == 0 && contact[0].Length != 0)
+            {
+                contactString = contact[0];
+            }
+            else if (contact[0].Length == 0 && contact[1].Length != 0)
+            {
+                contactString = contact[1];
+            }
+            else
+            {
+                contactString = string.Empty;
+            }
         }
         public void setContact1(string _c)
         {
             contact[1] = _c;
+            contactString = contact[0] + "," + contact[1];
+            if (contact[1].Length == 0 && contact[0].Length == 0)
+            {
+                contactString = string.Empty;
+            }
+            else if (contact[1].Length == 0 && contact[0].Length != 0)
+            {
+                contactString = contact[0];
+            }
+            else if (contact[0].Length == 0 && contact[1].Length != 0)
+            {
+                contactString = contact[1];
+            }
+            else
+            {
+                contactString = string.Empty;
+            }
         }
         public void addContact(string _contact)
         {
-            if(_contact.Length==0)
+            if (_contact.Length == 0)
             {
                 contact[0] = string.Empty;
                 contact[1] = string.Empty;
                 return;
             }
-            if(_contact.Equals(","))
+            if (_contact.Equals(","))
             {
                 contact[0] = string.Empty;
                 contact[1] = string.Empty;
                 return;
             }
-            
+
             if (contact[0].Length == 0)
             {
                 contact[0] = _contact;

@@ -96,7 +96,8 @@ namespace phonebook
                 dob = DateTime.ParseExact(dict[4].Value, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
             }
             personData = new person(dict[0].Value, dict[2].Value, dict[1].Value, gt, dict[5].Value, dict[6].Value, dict[7].Value, dob, string.Empty);
-            personData.addContact(dict[8].Value);
+            personData.setContact0(dict[7].Value);
+            personData.setContact1(dict[8].Value);
             personData.setEmail(dict[9].Value);
             closeStatus = true;
             this.Close();

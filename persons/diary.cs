@@ -140,7 +140,7 @@ namespace persons
                     {
                         added = DateTime.ParseExact(e.Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                     }
-                    catch (Exception exption)
+                    catch (Exception )
                     {
                         added = DateTime.ParseExact(e.Value, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
                     }
@@ -151,7 +151,7 @@ namespace persons
                     {
                         dob = DateTime.ParseExact(e.Value, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                     }
-                    catch (Exception exption)
+                    catch (Exception )
                     {
                         dob = DateTime.ParseExact(e.Value, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
                     }
@@ -163,8 +163,8 @@ namespace persons
                 }
             }
             person p = new person(firstName, lastName, midName, gt, address, city, string.Empty, dob, pic);
-            p.addContact(contact0);
-            p.addContact(contact1);
+            p.setContact0(contact0);
+            p.setContact1(contact1);
             p.setEmail(email);
             personList.Add(p);
         }
