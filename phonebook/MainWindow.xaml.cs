@@ -217,14 +217,50 @@ namespace phonebook
         }
         private void printContact(object sender, RoutedEventArgs e)
         { 
-            XElement ele = cPerson.xml();
+            //XElement ele = cPerson.xml();
             XDocument doc = new XDocument();
-            doc.Add(ele);
-            if (File.Exists("printContact.xml"))
+            //doc.Add(ele);
+            if (File.Exists("printContact.html"))
             {
-                File.Delete("printContact.xml");
+                File.Delete("printContact.html");
             }
-            doc.Save("printContact.xml");
+            XElement html = new XElement("html");
+            XElement head = new XElement("head");
+            XElement title = new XElement("title");
+            title.Value = "Contact Preview";
+            head.Add(title);
+            html.Add(head);
+
+            XElement body = new XElement("body");
+
+            XElement top = new XElement("div");
+            top.Add( new XAttribute("class","top"));
+
+            XElement picdiv = new XElement("div");
+            picdiv.Add(new XAttribute("class","picture"));
+
+            XElement img = new XElement("img");
+            img.Add(new XAttribute("src","personempty.png"));
+            img.Add(new XAttribute("alt","person picture"));
+            picdiv.Add(img);
+
+            XElement name = new XElement("div");
+            name.Add(new XAttribute("class","name"));
+            XElement pname = new XElement("h1");
+            pname.Value = cPerson.getName();
+            name.Add(pname);
+            XElement contact = new XElement("h3");
+            contact.Value = cPerson.getContact();
+            name.Add(contact);
+
+            top.Add(picdiv);
+            top.Add(name);
+
+            body.Add(top);
+            html.Add(body);
+
+            doc.Add(html);
+            doc.Save("printContact.html");
         }
 
     }
