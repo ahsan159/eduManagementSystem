@@ -16,5 +16,10 @@
   <Reference Include="person">
   <HintPath>../persons/person.dll</HintPath>
   </Reference>
+  </ItemGroup>  
+  <ItemGroup>
+    <!-- <PackageReference Include="HtmlRenderer.PdfSharp" Version="1.5.1-beta1" /> -->
+    <PackageReference Include="itext7" Version="8.0.0" />
+    <!-- <PackageReference Include="itext7.pdfhtml" Version="5.0.0" /> -->
   </ItemGroup>
 </Project>

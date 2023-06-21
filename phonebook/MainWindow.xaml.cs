@@ -15,6 +15,10 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
 using persons;
 
 namespace phonebook
@@ -147,8 +151,8 @@ namespace phonebook
                 catch (Exception exp)
                 {
                     MessageBox.Show(exp.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }                
-            }            
+                }
+            }
         }
         private void deleteContact(object sender, RoutedEventArgs e)
         {
@@ -173,14 +177,14 @@ namespace phonebook
             {
                 //MessageBox.Show(exp.Message,exp.Source);
             }
-            
+
         }
         private void saveContact(object sender, RoutedEventArgs e)
         {
             addnedit updateBox = new addnedit(cPerson);
             updateBox.ShowDialog();
-            if(updateBox.closeStatus) 
-            {                
+            if (updateBox.closeStatus)
+            {
                 phoneDiary.remove(cPerson);
                 person pUpdated = updateBox.personData;
                 phoneDiary.add(pUpdated);
@@ -211,12 +215,12 @@ namespace phonebook
                 catch (Exception exp)
                 {
                     MessageBox.Show(exp.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }       
+                }
             }
 
         }
         private void printContact(object sender, RoutedEventArgs e)
-        { 
+        {
             //XElement ele = cPerson.xml();
             XDocument doc = new XDocument();
             //doc.Add(ele);
@@ -229,23 +233,54 @@ namespace phonebook
             XElement title = new XElement("title");
             title.Value = "Contact Preview";
             head.Add(title);
+            XElement style = new XElement("style");
+            style.Value = @"        .top {
+            display: flex;
+            margin-bottom: 10px;
+            height: 200px;
+            }
+            .picture, .name {
+                margin-right: 20px;                                
+            }
+            .picture {
+                display: flex;
+                justify-content: center;
+            }
+            .name {
+                padding-top: 35px;
+                display: block;
+                width: 100%;
+            }
+            .middle {                
+                display: flex;
+                justify-content: left;
+            }
+            .headers{
+                width: 10%;                
+                margin-left: 20px;
+            }
+            .data
+            {
+                width: 80%;                
+            }";
+            head.Add(style);
             html.Add(head);
 
             XElement body = new XElement("body");
 
             XElement top = new XElement("div");
-            top.Add( new XAttribute("class","top"));
+            top.Add(new XAttribute("class", "top"));
 
             XElement picdiv = new XElement("div");
-            picdiv.Add(new XAttribute("class","picture"));
+            picdiv.Add(new XAttribute("class", "picture"));
 
             XElement img = new XElement("img");
-            img.Add(new XAttribute("src","personempty.png"));
-            img.Add(new XAttribute("alt","person picture"));
+            img.Add(new XAttribute("src", "personempty.png"));
+            img.Add(new XAttribute("alt", "person picture"));
             picdiv.Add(img);
 
             XElement name = new XElement("div");
-            name.Add(new XAttribute("class","name"));
+            name.Add(new XAttribute("class", "name"));
             XElement pname = new XElement("h1");
             pname.Value = cPerson.getName();
             name.Add(pname);
@@ -257,10 +292,114 @@ namespace phonebook
             top.Add(name);
 
             body.Add(top);
+
+            XElement middle = new XElement("div");
+            middle.Add(new XAttribute("class","middle"));
+            XElement headers = new XElement("div");
+            headers.Add(new XAttribute("class", "headers"));
+
+            XElement n1 = new XElement("h3");
+            n1.Value = "Name";
+
+            XElement n2 = new XElement("h3");
+            n2.Value = "Gender";
+
+            XElement n3 = new XElement("h3");
+            n3.Value = "Address";
+
+            XElement n4 = new XElement("h3");
+            n4.Value = "City";
+
+            XElement n5 = new XElement("h3");
+            n5.Value = "Contact 0";
+
+            XElement n6 = new XElement("h3");
+            n6.Value = "Contact 1";
+
+            XElement n7 = new XElement("h3");
+            n7.Value = "Email";
+
+            XElement n8 = new XElement("h3");
+            n8.Value = "Date of Birth";
+
+            // XElement n9 = new XElement("h3");
+            // n9.Value = "Name";
+
+            headers.Add(n1);
+            headers.Add(n2);
+            headers.Add(n3);
+            headers.Add(n4);
+            headers.Add(n5);
+            headers.Add(n6);
+            headers.Add(n7);
+            headers.Add(n8);
+
+            middle.Add(headers);
+
+            XElement data = new XElement("div");
+            data.Add(new XAttribute("class", "data"));
+
+            XElement o1 = new XElement("h3");
+            o1.Value = cPerson.getName() + " ";
+
+            XElement o2 = new XElement("h3");
+            o2.Value = cPerson.getGender().ToString() + " ";
+
+            XElement o3 = new XElement("h3");
+            o3.Value = cPerson.getAddress() + " ";
+
+            XElement o4 = new XElement("h3");
+            o4.Value = cPerson.getCity() + " ";
+
+            XElement o5 = new XElement("h3");
+            o5.Value = cPerson.getContact0() + " ";
+
+            XElement o6 = new XElement("h3");
+            o6.Value = cPerson.getContact1() + " ";
+
+            XElement o7 = new XElement("h3");
+            o7.Value = cPerson.getEmail() + " ";
+
+            XElement o8 = new XElement("h3");
+            o8.Value = cPerson.getDOB().ToString("dd/MM/yyyy") + " Age " + cPerson.getAge() + " ";
+
+            // XElement n9 = new XElement("h3");
+            // n9.Value = "Name";
+
+            data.Add(o1);
+            data.Add(o2);
+            data.Add(o3);
+            data.Add(o4);
+            data.Add(o5);
+            data.Add(o6);
+            data.Add(o7);
+            data.Add(o8);
+
+            middle.Add(data);
+
+            body.Add(middle);
             html.Add(body);
 
-            doc.Add(html);
-            doc.Save("printContact.html");
+            //MessageBox.Show( html.ToString());
+            File.WriteAllText("printContact.html",html.ToString());
+
+            // FileStream htmlFile = File.Open("printContact.html",FileMode.Open);
+            // FileStream pdfFile = File.Open("pdfContact.pdf",FileMode.Create);
+            // ConverterProperties cvp = new ConverterProperties();
+            // try {
+            // HtmlConverter.ConvertToPdf(htmlFile,pdfFile,cvp);
+            // }
+            // catch(Exception ee)
+            // {
+            //     MessageBox.Show(ee.Message+Environment.NewLine+ee.StackTrace,ee.Source );
+            // }
+            // htmlFile.Close();
+            // pdfFile.Close();
+            // htmlFile.Dispose();
+            // pdfFile.Dispose();
+            
+            
+
         }
 
     }
